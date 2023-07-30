@@ -1,0 +1,93 @@
+<div class="container" style="padding-top: 50px;">
+
+    <h1>
+        <small>View information about block #{{number}}</small>
+    </h1>
+
+    <div id="block-97785883" class="blockdiv">
+        <div style="padding:10px 0;width:100%;text-align:right;clear:both">
+            <button class="btn btn-info btn-sm trn balance-inline">{{conf}}</button>
+            <button class="btn btn-info btn-sm trn balance-inline"><span>{{gasUsed}} Gas Used</span></button>
+        </div>
+        <table class="table table-striped">
+            <tbody><tr>
+                <th colspan="2" style="text-align:left">Summary</th>
+            </tr>
+            <tr>
+                <td width="15%">Block Hash</td>
+                <td align="left"><a class="hash-link" href="./#/block/{{blockId}}">{{hash}}</a> <span class="pull-right"></span></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td>
+                    {{timestamp}}
+                </td>
+            </tr>
+            <tr>
+                <td>Difficulty</td>
+                <td>
+                    {{difficulty}}
+                </td>
+            </tr>
+            <tr>
+                <td>Size</td>
+                <td>{{size}}</td>
+            </tr>
+            <tr>
+                <td>Miner</td>
+                <td><a href="./#/address/{{miner}}">{{miner}}</a></td>
+            </tr>
+            <tr>
+                <td>Gas Limit</td>
+                <td>{{gasLimit}}</td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td style="word-break: break-all;"><code><textarea readonly="readonly" style="width: 100%;">{{extraData}}</textarea></code></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <h2 style="margin-top: 30px;">
+      Transactions
+      <small>- contained in current block</small>
+    </h2>
+
+    <div ng-repeat="tx in transactions">
+      <table class="table table-striped">
+          <tbody>
+          <tr>
+              <th colspan="2" style="text-align:left">Transaction #{{$index+1}}</th>
+          </tr>
+          <tr>
+              <td>Tx Hash</td>
+              <td><a href="./#/transaction/{{tx.hash}}">{{tx.hash}}</a></td>
+          </tr>
+          <tr>
+              <td width="15%">From</td>
+              <td><a href="./#/address/{{tx.from}}">{{tx.from}}</a></td>
+          </tr>
+          <tr>
+              <td>To</td>
+              <td><a href="./#/address/{{tx.to}}">{{tx.to}}</a></td>
+          </tr>
+          <tr>
+              <td>Gas</td>
+              <td>{{tx.gas}}</td>
+          </tr>
+          <tr>
+              <td>Input</td>
+              <td><code><textarea style="width: 100%">{{tx.input}}</textarea></code></td>
+          </tr>
+          <tr>
+              <td>Value</td>
+              <td>{{tx.value}} NIO</td>
+          </tr>
+          </tbody>
+      </table>
+      <hr>
+    </div>
+
+</div>
