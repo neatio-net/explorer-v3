@@ -33,7 +33,7 @@ angular.module('ethExplorer.block', ['ngRoute','ui.bootstrap'])
                     $scope.gasUsed = result.gasUsed;
                     $scope.nonce = result.nonce;
                     $scope.difficulty = ("" + result.difficulty).replace(/['"]+/g, '');
-                    $scope.gasLimit = result.gasLimit; // that's a string
+                    $scope.gasLimit = result.gasLimit; 
                     $scope.nonce = result.nonce;
                     $scope.number = result.number;
                     $scope.parentHash = result.parentHash;
