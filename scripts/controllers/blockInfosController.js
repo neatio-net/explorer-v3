@@ -1,4 +1,4 @@
-angular.module('ethExplorer.block', ['ngRoute','ui.bootstrap'])
+angular.module('nioExplorer.block', ['ngRoute','ui.bootstrap'])
     .controller('blockInfosCtrl', function ($rootScope, $scope, $location, $routeParams,$q) {
 
 	var web3 = $rootScope.web3;
