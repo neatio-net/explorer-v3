@@ -2,7 +2,7 @@
 
 $.getJSON( "./config.json" , function( result ){
     $(document).ready(function() {
-    angular.module('ethExplorer', ['ngRoute','ui.bootstrap', 'ethExplorer.search', 'ethExplorer.address', 'ethExplorer.tx', 'ethExplorer.main', 'ethExplorer.block'])
+    angular.module('nioExplorer', ['ngRoute','ui.bootstrap', 'nioExplorer.search', 'nioExplorer.address', 'nioExplorer.tx', 'nioExplorer.main', 'nioExplorer.block'])
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
                 $locationProvider.html5Mode(true);
@@ -50,6 +50,6 @@ $.getJSON( "./config.json" , function( result ){
                     };
                     
             });
-    angular.bootstrap(document, ['ethExplorer']);
+    angular.bootstrap(document, ['nioExplorer']);
     });
 });
