@@ -1,4 +1,4 @@
-angular.module('ethExplorer.tx', ['ngRoute','ui.bootstrap'])
+angular.module('nioExplorer.tx', ['ngRoute','ui.bootstrap'])
     .controller('transactionInfosCtrl', function ($rootScope, $scope, $location, $routeParams,$q) {
 
        var web3 = $rootScope.web3;
