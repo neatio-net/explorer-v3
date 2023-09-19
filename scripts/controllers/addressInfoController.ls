@@ -1,4 +1,4 @@
-angular.module('ethExplorer.address', ['ngRoute','ui.bootstrap']).controller 'addressInfoCtrl', ($rootScope, $scope, $location, $routeParams, $q) ->
+angular.module('nioExplorer.address', ['ngRoute','ui.bootstrap']).controller 'addressInfoCtrl', ($rootScope, $scope, $location, $routeParams, $q) ->
     return if not $routeParams.addressId?
     $scope <<<< $routeParams
     web3 = $rootScope.web3
