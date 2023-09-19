@@ -1,4 +1,4 @@
-(angular.module 'ethExplorer.main', []).controller 'mainCtrl', ($rootScope, $scope) ->
+(angular.module 'nioExplorer.main', []).controller 'mainCtrl', ($rootScope, $scope) ->
   load-block = ([item, ...items], cb)->
       return cb null if not item?
       console.log item
@@ -23,7 +23,7 @@
   err <- init
   console.log err
 
-(angular.module 'ethExplorer.search', []).controller 'searchCtrl', ($rootScope, $scope) ->
+(angular.module 'nioExplorer.search', []).controller 'searchCtrl', ($rootScope, $scope) ->
   goToBlockInfos = (requestStr) ->
     $location.path '/block/' + requestStr
   goToAddrInfos = (requestStr) ->
